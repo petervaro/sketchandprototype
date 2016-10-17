@@ -1,0 +1,127 @@
+//- INFO --
+//- INFO --
+
+//------------------------------------------------------------------------------
+mixin post(src, captions)
+    a(href  = '#'
+      class = 'content-bottom-post')
+        img(src=src)
+        div
+            div
+                each caption in captions
+                    span= caption
+
+
+
+//------------------------------------------------------------------------------
+doctype html
+html(lang='en')
+    //- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    // Copyright (C) 2014 - 2017 Peter Varo. All rights reserved.
+    head
+        meta(charset='utf-8')
+        meta(name    = 'description'
+             content = 'Peter Varo (developer|designer)')
+        meta(name    = 'keywords'
+             content = 'peter,varo,petervaro,design,designer,jewelry,product,' +
+                       'generative,procedural,parametric,algorithmic,3d,'      +
+                       'print,sketch,prototype,draft,cnc,lathe,laser,edm,'     +
+                       'mome,art,artist,typography,typo,startup,script,'       +
+                       'graphic,ui,ux')
+        meta(name    = 'Author'
+             content = 'Peter Varo')
+        title Sketch and Prototype
+        link(rel  = 'shortcut icon'
+             type = 'image/x-icon'
+             href = 'favicon.ico')
+        link(rel  = 'icon'
+             type = 'image/x-icon'
+             href = 'favicon.ico')
+        link(rel  = 'stylesheet'
+             type = 'text/css'
+             href = '../css/index.css')
+        script(src='../js/anim.js')
+        script(src='../js/grid.js')
+        script(src='../js/resizer.js')
+        script(src='../js/index.js')
+
+    //- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    body
+        div#content
+            div#content-top
+                div#content-top-left
+                    div
+                        p
+                            | sketch
+                            span and
+                        p prototype
+                    div
+                        p selected works
+                        p of peter varo
+                        p 2008 — 2014
+
+                div#content-top-right
+                    //- div
+                    p
+                        span make
+                        = ' '
+                        | sketches of the inspiring moments!
+                    p
+                        span find
+                        = ' '
+                        | the smallest working prototype and
+                        | build surely upon it, step by step!
+                    p
+                        span prove
+                        = ' '
+                        | an initial concept and continously evolve it!
+                    p
+                        span seek
+                        = ' '
+                        | the biggest gain for the smallest
+                        | amount of expended resources!
+                    p
+                        span design
+                        = ' '
+                        | is all about these, isn't it?
+
+                div#content-top-back
+                    a(href='http://petervaro.com')
+                        img(src='../img/etc/arrow.svg'
+                            alt='<-')
+                        span petervaro.com
+
+            div#content-bottom
+                +post('../img/4px/preview.png'         , ['4px'])
+                +post('../img/alsus/preview.png'       , ['alsus'])
+                +post('../img/antler/preview.png'      , ['antler'])
+                +post('../img/bfccnregular/preview.png', ['bf ccn', 'regular'])
+                +post('../img/biomorph/preview.png'    , ['biomorph29'])
+                +post('../img/cocoon/preview.png'      , ['cocoon'])
+                +post('../img/rings/preview.png'       , ['rings'])
+                +post('../img/devsigner/preview.png'   , ['devsigner'])
+                +post('../img/logos/preview.png'       , ['logos'])
+                +post('../img/sculpts/preview.png'     , ['sculpts'])
+                +post('../img/xxx/preview.png', ['caption'])
+                +post('../img/xxx/preview.png', ['caption'])
+                +post('../img/xxx/preview.png', ['caption'])
+                +post('../img/xxx/preview.png', ['caption'])
+                +post('../img/xxx/preview.png', ['caption'])
+                +post('../img/xxx/preview.png', ['caption'])
+                +post('../img/xxx/preview.png', ['caption'])
+                +post('../img/xxx/preview.png', ['caption'])
+                +post('../img/xxx/preview.png', ['caption'])
+                +post('../img/xxx/preview.png', ['caption'])
+                +post('../img/xxx/preview.png', ['caption'])
+                +post('../img/xxx/preview.png', ['caption'])
+                +post('../img/xxx/preview.png', ['caption'])
+                +post('../img/xxx/preview.png', ['caption'])
+                +post('../img/xxx/preview.png', ['caption'])
+                +post('../img/xxx/preview.png', ['caption'])
+                +post('../img/xxx/preview.png', ['caption'])
+                +post('../img/xxx/preview.png', ['caption'])
+                +post('../img/xxx/preview.png', ['caption'])
+                +post('../img/xxx/preview.png', ['caption'])
+                +post('../img/xxx/preview.png', ['caption'])
+                +post('../img/xxx/preview.png', ['caption'])
+        script(type='text/javascript') main();
