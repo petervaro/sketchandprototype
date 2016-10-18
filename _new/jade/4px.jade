@@ -1,0 +1,28 @@
+//- INFO --
+//- INFO --
+
+extends _project
+
+block title
+    title 4PX
+
+block project
+    +cover(['4px'],
+           '2011',
+           '../img/4px/display.png',
+           [
+                'The world&rsquo;s smallest legible typeface on LCD displays.'
+           ],
+           [
+                [
+                    'https://github.com/petervaro/4px',
+                    '4PX on GitHub'
+                ]
+           ])
+
+    +right-image('../img/4px/editor.png',
+                 '4PX uses sub-pixels to draw its 88 glyphs '     +
+                 'on the screen. It comes with a multi-platform ' +
+                 'editor, implemented in Python, using Tcl/Tk '   +
+                 'as GUI backend.',
+                 'color: #3D4759;')

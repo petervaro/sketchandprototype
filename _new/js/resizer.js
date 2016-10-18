@@ -11,7 +11,8 @@ var g = g || {};
 
 
     /*------------------------------------------------------------------------*/
-    function Resizer(postsClass)
+    function Resizer(postsClass,
+                     backgroundId)
     {
         this._id          = null;
         this._display     = false;
@@ -19,11 +20,7 @@ var g = g || {};
         this._opacity     = 0.0;
         this._windowWidth = 0;
         this._posts       = document.getElementsByClassName(postsClass);
-        this._postWidth   = this._posts[0].offsetWidth;
-
-        // TEST
-        this._postWidth = 168 + 2*10;
-        // TEST
+        this._postWidth   = this._posts[0].offsetWidth + 2*16;
     }
 
 

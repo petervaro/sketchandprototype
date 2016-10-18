@@ -1,0 +1,34 @@
+/* INFO **
+** INFO */
+
+/*- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/* Import compass mixins */
+@import "compass/reset";
+@import "compass/css3/hyphenation";
+
+/*----------------------------------------------------------------------------*/
+/* Constants */
+$POST-SIZE   : 144px;
+$PADDING     : 32px;
+$REDORANGE   : #FF4929;
+$YELLOWWHITE : #FFF8BD;
+$BLUEGRAY    : #E7EAEE;
+$DEEPBLUE    : #3D4759;
+
+
+/*----------------------------------------------------------------------------*/
+body
+{
+    font-variant-ligatures : common-ligatures;
+    font-variant-ligatures : historical-ligatures;
+    font-variant-ligatures : discretionary-ligatures;
+    @include hyphens(auto);
+}
+
+
+/*----------------------------------------------------------------------------*/
+a
+{
+    color           : inherit;
+    text-decoration : none;
+}

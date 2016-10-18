@@ -1,0 +1,33 @@
+//- INFO --
+//- INFO --
+
+extends _project
+
+block title
+    title Alsus
+
+block project
+    +cover(['alsus'],
+           '2011',
+           '../img/alsus/disassembled.png',
+           [
+                'Tobacco pipe, with a &ldquo;folded&rdquo; ' +
+                'metal stem and replaceable parts.'
+           ])
+
+    +left-image('../img/alsus/top.png',
+                'Best from both worlds: ancient traditions meet ' +
+                'state of the art technology.',
+                'background: #FFFFFF; color: #3D4759;')
+
+    +right-image('../img/alsus/left.png',
+                 'Not only its functionality, but the materials and ' +
+                 'the manufacturing processes are mixtures of high-'  +
+                 'tech and tradition. Wirecut EDM magnesium and '     +
+                 'aluminium, turned briar-root and molded polycarbonate.',
+                 'background: #FFFFFF; color: #3D4759;')
+
+    +left-image('../img/alsus/wireframe.png',
+                '3D CAD model&rsquo;s wireframe view: precision ' +
+                'even in the smallest details.',
+                'background: #191919; color: #E7EAEE;')

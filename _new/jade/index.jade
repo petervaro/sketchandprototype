@@ -2,10 +2,18 @@
 //- INFO --
 
 //------------------------------------------------------------------------------
-mixin post(src, captions)
-    a(href  = '#'
+-
+    function letterify(s)
+    {
+        return s.replace(' ', '').replace('_', '').replace('-', '');
+    }
+
+
+//------------------------------------------------------------------------------
+mixin post(captions)
+    a(href  = '../html/' + letterify(captions[0]) + '.html'
       class = 'content-bottom-post')
-        img(src=src)
+        img(src='../img/' + letterify(captions[0]) + '/preview.png')
         div
             div
                 each caption in captions
@@ -17,7 +25,7 @@ mixin post(src, captions)
 doctype html
 html(lang='en')
     //- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-    // Copyright (C) 2014 - 2017 Peter Varo. All rights reserved.
+    // Copyright (C) 2008 - 2017 Peter Varo. All rights reserved.
     head
         meta(charset='utf-8')
         meta(name    = 'description'
@@ -61,7 +69,6 @@ html(lang='en')
                         p 2008 — 2014
 
                 div#content-top-right
-                    //- div
                     p
                         span make
                         = ' '
@@ -83,45 +90,46 @@ html(lang='en')
                     p
                         span design
                         = ' '
-                        | is all about these, isn't it?
+                        | is all about these, isn&rsquo;t it?
 
                 div#content-top-back
                     a(href='http://petervaro.com')
-                        img(src='../img/etc/arrow.svg'
-                            alt='<-')
+                        img(src='../img/etc/forward.svg'
+                            alt='->')
                         span petervaro.com
 
             div#content-bottom
-                +post('../img/4px/preview.png'         , ['4px'])
-                +post('../img/alsus/preview.png'       , ['alsus'])
-                +post('../img/antler/preview.png'      , ['antler'])
-                +post('../img/bfccnregular/preview.png', ['bf ccn', 'regular'])
-                +post('../img/biomorph/preview.png'    , ['biomorph29'])
-                +post('../img/cocoon/preview.png'      , ['cocoon'])
-                +post('../img/rings/preview.png'       , ['rings'])
-                +post('../img/devsigner/preview.png'   , ['devsigner'])
-                +post('../img/logos/preview.png'       , ['logos'])
-                +post('../img/sculpts/preview.png'     , ['sculpts'])
-                +post('../img/xxx/preview.png', ['caption'])
-                +post('../img/xxx/preview.png', ['caption'])
-                +post('../img/xxx/preview.png', ['caption'])
-                +post('../img/xxx/preview.png', ['caption'])
-                +post('../img/xxx/preview.png', ['caption'])
-                +post('../img/xxx/preview.png', ['caption'])
-                +post('../img/xxx/preview.png', ['caption'])
-                +post('../img/xxx/preview.png', ['caption'])
-                +post('../img/xxx/preview.png', ['caption'])
-                +post('../img/xxx/preview.png', ['caption'])
-                +post('../img/xxx/preview.png', ['caption'])
-                +post('../img/xxx/preview.png', ['caption'])
-                +post('../img/xxx/preview.png', ['caption'])
-                +post('../img/xxx/preview.png', ['caption'])
-                +post('../img/xxx/preview.png', ['caption'])
-                +post('../img/xxx/preview.png', ['caption'])
-                +post('../img/xxx/preview.png', ['caption'])
-                +post('../img/xxx/preview.png', ['caption'])
-                +post('../img/xxx/preview.png', ['caption'])
-                +post('../img/xxx/preview.png', ['caption'])
-                +post('../img/xxx/preview.png', ['caption'])
-                +post('../img/xxx/preview.png', ['caption'])
+                p &copy; 2008 &ndash; 2017 peter varo
+                +post(['4px'])
+                +post(['alsus'])
+                +post(['antler'])
+                +post(['bf ccn', 'regular'])
+                +post(['biomorph29'])
+                +post(['cocoon'])
+                +post(['jewelry'])
+                +post(['devsigner'])
+                +post(['logos'])
+                +post(['sculpts'])
+                +post(['math_srf'])
+                +post(['xxx'])
+                +post(['xxx'])
+                +post(['xxx'])
+                +post(['xxx'])
+                +post(['xxx'])
+                +post(['xxx'])
+                +post(['xxx'])
+                +post(['xxx'])
+                +post(['xxx'])
+                +post(['xxx'])
+                +post(['xxx'])
+                +post(['xxx'])
+                +post(['xxx'])
+                +post(['xxx'])
+                +post(['xxx'])
+                +post(['xxx'])
+                +post(['xxx'])
+                +post(['xxx'])
+                +post(['xxx'])
+                +post(['xxx'])
+                +post(['xxx'])
         script(type='text/javascript') main();

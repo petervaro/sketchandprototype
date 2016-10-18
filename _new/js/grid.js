@@ -38,7 +38,7 @@ var g = g || {};
 
         /* Generator states */
         this._i    = 0;
-        this._y    = x;
+        this._y    = 0;
         this._cols = this._lcols;
     }
 

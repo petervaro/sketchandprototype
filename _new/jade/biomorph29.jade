@@ -1,0 +1,32 @@
+//- INFO --
+//- INFO --
+
+extends _project
+
+block title
+    title Biomorph29
+
+block project
+    +cover(['biomorph29'],
+           '2013',
+           '../img/biomorph29/sketch.png',
+           [
+                'Organic shape experimentation &mdash; ' +
+                'a digital design process study.'
+           ])
+
+    +left-image('../img/biomorph29/mesh.png',
+                'After the digital sketches, the shape is modeled in a ' +
+                'mesh modeling system, for fast feedbacks and easyier '  +
+                'modifications.',
+                'background: #FFFFFF; color: #3D4759;')
+
+    +right-image('../img/biomorph29/nurbs.png',
+                 'Once the initial mesh is done, it is ' +
+                 'remodeled as a NURBS surface.',
+                 'background: #FFFFFF; color: #3D4759;')
+
+    +left-image('../img/biomorph29/disassembled.png',
+                'Then the CAD model is split into smaller assemblable ' +
+                'parts for easier manufacturing.',
+                'background: #FFFFFF; color: #3D4759;')

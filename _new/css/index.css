@@ -2,9 +2,9 @@
 ** INFO */
 /*- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 /* Import compass mixins */
+@import url(https://fonts.googleapis.com/css?family=Crimson+Text:400,400i);
 @import url(https://fonts.googleapis.com/css?family=Source+Code+Pro:300,900);
 @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,900);
-@import url(https://fonts.googleapis.com/css?family=Crimson+Text:400i,700i);
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -62,25 +62,13 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 }
 
 /*- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
-/* Import fonts */
+/* Import common stuffs */
+/* INFO **
+** INFO */
+/*- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/* Import compass mixins */
 /*----------------------------------------------------------------------------*/
 /* Constants */
-/*----------------------------------------------------------------------------*/
-html,
-body {
-  position: relative;
-  width: 100%;
-  color: #FF4929;
-  font-family: 'Source Sans Pro', sans-serif;
-  font-weight: 400;
-  font-size: 16pt;
-  background: #E7EAEE;
-  line-height: 1.2;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
 /*----------------------------------------------------------------------------*/
 body {
   font-variant-ligatures: common-ligatures;
@@ -96,6 +84,24 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+}
+
+/*- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/* Import fonts */
+/*----------------------------------------------------------------------------*/
+html,
+body {
+  position: relative;
+  width: 100%;
+  color: #FF4929;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 400;
+  font-size: 14pt;
+  background: #E7EAEE;
+  line-height: 1.2;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 /*----------------------------------------------------------------------------*/
@@ -149,7 +155,7 @@ a {
   float: left;
   font-family: 'Crimson Text', serif;
   font-style: italic;
-  font-size: 14pt;
+  font-size: 13pt;
   font-weight: 400;
   display: block;
   padding-left: 32px;
@@ -167,7 +173,8 @@ a {
 }
 #content-top-right > p > span {
   text-transform: capitalize;
-  font-weight: 700;
+  font-weight: 400;
+  font-style: normal;
 }
 #content-top-back {
   float: right;
@@ -194,7 +201,19 @@ a {
 }
 #content-bottom {
   position: relative;
-  top: 200px;
+  top: 250px;
+  /*- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+}
+#content-bottom > p:first-child {
+  width: 100%;
+  display: block;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 9pt;
+  margin-bottom: 16px;
+  position: fixed;
+  bottom: 0;
+  z-index: -100;
 }
 
 /*----------------------------------------------------------------------------*/
@@ -208,37 +227,47 @@ a {
   visibility: hidden;
   color: #FFF8BD;
   position: absolute;
-  width: 168px;
-  height: 168px;
-  border-radius: 50%;
-  -moz-transition: color 0.5s ease, box-shadow 0.5s ease;
-  -o-transition: color 0.5s ease, box-shadow 0.5s ease;
-  -webkit-transition: color 0.5s ease, box-shadow 0.5s ease;
-  transition: color 0.5s ease, box-shadow 0.5s ease;
+  width: 144px;
+  height: 144px;
+  padding-bottom: 32px;
+  -moz-transition: color 0.5s ease;
+  -o-transition: color 0.5s ease;
+  -webkit-transition: color 0.5s ease;
+  transition: color 0.5s ease;
   /*- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
   /*- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
   /*- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 }
 .content-bottom-post:hover {
   color: #FF4929;
-  -moz-box-shadow: 0 4px 16px #464f60;
-  -webkit-box-shadow: 0 4px 16px #464f60;
-  box-shadow: 0 4px 16px #464f60;
+}
+.content-bottom-post:hover > img {
+  -webkit-filter: none;
+  filter: none;
+  -moz-box-shadow: 0 2px 10px #464f60;
+  -webkit-box-shadow: 0 2px 10px #464f60;
+  box-shadow: 0 2px 10px #464f60;
 }
 .content-bottom-post > img {
-  width: 168px;
-  height: 168px;
+  width: 144px;
+  height: 144px;
   border-radius: 50%;
-  z-index: 1;
+  z-index: 50;
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+  -moz-transition: filter 0.5s ease, box-shadow 0.5s ease;
+  -o-transition: filter 0.5s ease, box-shadow 0.5s ease;
+  -webkit-transition: filter 0.5s ease, box-shadow 0.5s ease;
+  transition: filter 0.5s ease, box-shadow 0.5s ease;
 }
 .content-bottom-post > div {
   position: absolute;
   top: 0;
   left: 0;
-  width: 168px;
-  height: 168px;
+  width: 144px;
+  height: 144px;
   text-align: center;
-  z-index: 2;
+  z-index: 100;
   -moz-transform-style: preserve-3d;
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
