@@ -19,10 +19,25 @@ mixin right-image(src, caption, style)
 
 
 //------------------------------------------------------------------------------
-mixin dual-image(src_left, src_right)
+mixin dual-left-image(src_left, src_right, style)
     div(class='content-image')
         img(src=src_left)
+        div(style=style)
+            img(src=src_right)
+
+
+//------------------------------------------------------------------------------
+mixin dual-right-image(src_right, src_left, style)
+    div(class='content-image')
+        div(style=style)
+            img(src=src_left)
         img(src=src_right)
+
+
+//------------------------------------------------------------------------------
+mixin image(src)
+    div(class='content-single')
+        img(src=src)
 
 
 //------------------------------------------------------------------------------
