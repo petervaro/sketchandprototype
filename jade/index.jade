@@ -1,0 +1,122 @@
+//- INFO --
+//- INFO --
+
+//------------------------------------------------------------------------------
+-
+    function letterify(s) {return s.replace(/[^A-Za-z0-9]/, '');}
+
+
+//------------------------------------------------------------------------------
+mixin post(captions)
+    a(href  = 'html/' + letterify(captions[0]) + '.html'
+      class = 'content-bottom-post')
+        img(src='img/' + letterify(captions[0]) + '/preview.png')
+        div
+            div
+                each caption in captions
+                    span= caption
+
+
+
+//------------------------------------------------------------------------------
+doctype html
+html(lang='en')
+    //- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    // Copyright (C) 2008 - 2017 Peter Varo. All rights reserved.
+    head
+        meta(charset='utf-8')
+        meta(name    = 'description'
+             content = 'Peter Varo - Sketch and Prototype')
+        meta(name    = 'keywords'
+             content = 'peter,varo,petervaro,design,designer,jewelry,product,' +
+                       'generative,procedural,parametric,algorithmic,3d,'      +
+                       'print,sketch,prototype,draft,cnc,lathe,laser,edm,'     +
+                       'mome,art,artist,typography,typo,startup,script,'       +
+                       'graphic,ui,ux')
+        meta(name    = 'Author'
+             content = 'Peter Varo')
+        title Sketch and Prototype
+        link(rel  = 'shortcut icon'
+             type = 'image/x-icon'
+             href = 'favicon.ico')
+        link(rel  = 'icon'
+             type = 'image/x-icon'
+             href = 'favicon.ico')
+        link(rel  = 'stylesheet'
+             type = 'text/css'
+             href = 'css/index.css')
+        if DEBUG
+            script(src='js/anim.js')
+            script(src='js/grid.js')
+            script(src='js/resizer.js')
+            script(src='js/index.js')
+        else
+            script(src='js/anim.min.js')
+            script(src='js/grid.min.js')
+            script(src='js/resizer.min.js')
+            script(src='js/index.min.js')
+
+    //- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    body
+        div#content
+            div#content-top
+                div#content-top-left
+                    div
+                        p
+                            | sketch
+                            span and
+                        p prototype
+                    div
+                        p selected works
+                        p of peter varo
+                        p 2008 — 2014
+
+                div#content-top-right
+                    p
+                        span make
+                        = ' '
+                        | sketches of the inspiring moments!
+                    p
+                        span find
+                        = ' '
+                        | the smallest working prototype and
+                        | build surely upon it, step by step!
+                    p
+                        span prove
+                        = ' '
+                        | an initial concept and continously evolve it!
+                    p
+                        span seek
+                        = ' '
+                        | the biggest gain for the smallest
+                        | amount of expended resources!
+                    p
+                        span design
+                        = ' '
+                        | is all about these, isn&rsquo;t it?
+
+                div#content-top-back
+                    a(href='http://petervaro.com')
+                        img(src='img/etc/forward.svg'
+                            alt='->')
+                        span petervaro.com
+
+            div#content-bottom
+                p &copy; 2008 &ndash; 2017 peter varo
+                +post(['4px'])
+                +post(['alsus'])
+                +post(['antler'])
+                +post(['bf ccn'])
+                +post(['biomorph29'])
+                +post(['cocoon'])
+                +post(['jewelry'])
+                +post(['devsigner'])
+                +post(['logos'])
+                +post(['forms'])
+                +post(['math_srf'])
+                +post(['lowca'])
+                +post(['mickey'])
+                +post(['origami'])
+                +post(['avatars'])
+                +post(['var'])
+        script(type='text/javascript') main();
