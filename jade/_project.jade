@@ -4,39 +4,43 @@
 
 //------------------------------------------------------------------------------
 mixin left-image(src, caption, style)
-    div(class='content-image')
-        img(src=src)
-        div(style=style)
+    tr.content-left
+        td
+            img(src=src)
+        td(style=style)
             p !{caption}
 
 
 //------------------------------------------------------------------------------
 mixin right-image(src, caption, style)
-    div(class='content-image')
-        div(style=style)
+    tr.content-right
+        td(style=style)
             p !{caption}
-        img(src=src)
+        td
+            img(src=src)
 
 
 //------------------------------------------------------------------------------
 mixin dual-left-image(src_left, src_right, style)
-    div(class='content-image')
-        img(src=src_left)
-        div(style=style)
+    tr.content-left
+        td
+            img(src=src_left)
+        td(style=style)
             img(src=src_right)
 
 
 //------------------------------------------------------------------------------
 mixin dual-right-image(src_right, src_left, style)
-    div(class='content-image')
-        div(style=style)
+    tr.content-right
+        td(style=style)
             img(src=src_left)
-        img(src=src_right)
+        td
+            img(src=src_right)
 
 
 //------------------------------------------------------------------------------
 mixin image(src)
-    div(class='content-single')
+    div.content-single
         img(src=src)
 
 
@@ -47,7 +51,7 @@ mixin cover(titles, year, src, abstract, links)
             alt=titles[0])
         div
             div
-                a(href='html/index.html')
+                a(href='../index.html')
                     img(src='../img/etc/backward.svg'
                         alt='<-')
                     span home
@@ -73,6 +77,8 @@ html(lang='en')
     // Copyright (C) 2008 - 2017 Peter Varo. All rights reserved.
     head
         meta(charset='utf-8')
+        meta(name    = 'viewport'
+             content = 'width=720, initial-scale=0.5')
         meta(name    = 'description'
              content = 'Peter Varo - Sketch and Prototype')
         meta(name    = 'keywords'
